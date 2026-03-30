@@ -16,10 +16,20 @@ A comprehensive collection of projects on the **Xilinx Zynq-7000 FPGA (Zedboard)
 
 **Duration:** 3 Weeks | **Focus:** RTL Design, Simulation & FPGA Implementation
 
+<div align=center>
+
 ### 🎯 Overview
+
+</div>
+
 Implementation of a single-precision **Floating Point Adder (FPA)** compliant with the **IEEE 754** standard. The project evolved from a single-cycle behavioral model to a fully implemented system on the Zedboard with real-time I/O handling.
 
+<div align=center>
+
 ### 📂 Detailed Steps
+
+</div>
+
 * **Step 1 & 2: Architecture & Pipelining**
     * Designed a single-cycle FPA logic (Normalization, Leading Zero Counting).
     * Optimized performance by extending the design into a **2-stage pipeline** to improve clock frequency.
@@ -28,12 +38,16 @@ Implementation of a single-precision **Floating Point Adder (FPA)** compliant wi
     * **Memory & Control:** Integrated a `DataMemory` unit to store multiple 32-bit input pairs (A & B). Developed logic to cycle through these test cases using physical buttons, enabling real-time verification of the FPU.
     * **Signal Conditioning:** Implemented a **Digital Debouncer** to ensure signal stabilityand an **Edge Detector** to accurately trigger data transitions, filtering out mechanical switch noise.
 
+<div align=center>
+
 ### 🛠️ Toolstack
 | Category | Tool |
 | :--- | :--- |
 | **FPGA Board** | Xilinx Zedboard (Zynq-7000) |
 | **Development** | Xilinx Vivado 2020.2 |
 | **Language** | Verilog HDL |
+
+</div>
 
 ---
 
@@ -45,11 +59,19 @@ Implementation of a single-precision **Floating Point Adder (FPA)** compliant wi
 
 **Duration:** 2 Weeks | **Focus:** ARM Cortex-A9 Integration, Interrupts & Custom IP (PS-PL)
 
+<div align=center>
+
 ### 🎯 Overview
+
+</div>
 
 Development of a complete **System-on-Chip (SoC)** by interfacing the ARM processor (PS) with the FPGA fabric (PL). The project utilized a **Cross-Development** workflow, where software was developed and compiled on a host PC (Vitis IDE) and deployed to the target ARM Cortex-A9 processor for real-time execution and profiling.
 
+<div align=center>
+
 ### 📂 Detailed Steps
+
+</div>
 
 #### Step 1: PS-PL Communication & Interrupt Management
 * **1a. Basic Interface:** Built a hardware platform with an ARM CPU, UART, and GPIOs. Developed software to read physical switches and buttons from the PL and output their status to the serial console (Minicom), verifying the link between software and hardware.
@@ -81,6 +103,8 @@ Development of a complete **System-on-Chip (SoC)** by interfacing the ARM proces
   </tr>
 </table>
 
+<div align=center>
+
 The software developed in Vitis for each step, has been hosted in a different workspace:
 
 | Step | Vitis Workspace |
@@ -97,6 +121,8 @@ The software developed in Vitis for each step, has been hosted in a different wo
 | **Architecture** | Zynq-7000 SoC (Dual-core ARM Cortex-A9) |
 | **Hardware Design** | Xilinx Vivado 2020.2 |
 | **Software Dev** | Xilinx Vitis IDE |
+
+</div>
 
 ---
 
