@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div align=center>
 
 # ECE 340: Embedded Systems
