@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="lab2_step2_matrix_multiplication_app" location="/home/nbellas/workspace_step2/step2_arm/lab2_step2_matrix_multiplication_app" platform="/home/nbellas/workspace_step2/step2_arm/lab2_step2_platform/export/lab2_step2_platform/lab2_step2_platform.xpfm" platformUID="xilinx:zed::0.0(custom)" systemProject="lab2_step2_matrix_multiplication_app_system" sysConfig="lab2_step2_platform" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="6dcb79dd2ddafb1925ca1a7eaacde59a">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1014545951">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.442813615" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

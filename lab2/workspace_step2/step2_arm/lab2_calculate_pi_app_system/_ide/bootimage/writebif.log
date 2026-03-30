@@ -1,0 +1,9 @@
+TRACE::2026-03-23.23:35:29::SCWBifWriter::Found the complete platform /home/nbellas/workspace_step2/step2_arm/lab2_step2_platform/export/lab2_step2_platform/lab2_step2_platform.xpfm
+TRACE::2026-03-23.23:35:29::SCWBifWriter::hardware databse : design_simple_wrapper_4
+TRACE::2026-03-23.23:35:29::SCWBifWriter::bitstream found in the design
+TRACE::2026-03-23.23:35:29::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2026-03-23.23:35:29::SCWBifWriter::proc type : 
+TRACE::2026-03-23.23:35:29::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2026-03-23.23:35:29::SCWBifWriter::Device type is : zynq
+TRACE::2026-03-23.23:35:29::SCWBifWriter::Writing BIF to file : /home/nbellas/workspace_step2/step2_arm/lab2_calculate_pi_app_system/_ide/bootimage/template_lab2_calculate_pi_app_system.bif
+TRACE::2026-03-23.23:35:29::SCWBifWriter::Writing the Zynq Baremetal bif 

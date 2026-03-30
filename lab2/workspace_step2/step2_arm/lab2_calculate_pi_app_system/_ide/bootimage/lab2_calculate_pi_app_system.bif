@@ -1,0 +1,12 @@
+/* /tmp/bootgen_lab2_calculate_pi_app_system3624535451849420251/sd_card_temp/boot.bif */
+/* Command to create bitstream .bin file:       */
+/*   bootgen -image <bif_file> -split bin -w    */
+/* Command to create BOOT.BIN file:             */
+/*   bootgen  -image <bif_file> -w -o i BOOT.BIN */
+/*lab2_step2_platform*/
+the_ROM_image:
+{
+ [bootloader] /home/nbellas/workspace_step2/step2_arm/lab2_step2_platform/export/lab2_step2_platform/sw/lab2_step2_platform/boot/fsbl.elf
+ /home/nbellas/workspace_step2/step2_arm/lab2_calculate_pi_app/_ide/bitstream/design_simple_wrapper.bit
+ /home/nbellas/workspace_step2/step2_arm/lab2_calculate_pi_app/Debug/lab2_calculate_pi_app.elf
+}

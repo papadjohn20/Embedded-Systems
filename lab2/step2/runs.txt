@@ -1,0 +1,97 @@
+/******** SIZE: 1000x1000 ********/
+/****** OPTIMIZATION: none *******/
+
+...Starting Matrix Multiplication (1000x1000)...        
+Total Ticks: 124392979                                  
+Time elapsed: 95.000000 seconds
+
+
+/******** SIZE: 1000x1000 ********/
+/******* OPTIMIZATION: O2 ********/
+
+...Starting Matrix Multiplication (1000x1000)...
+Total Ticks: 21691482
+Time elapsed: 16.000000 seconds
+
+
+
+/******** SIZE: 500x500 *********/
+/****** OPTIMIZATION: none ******/
+
+...Starting Matrix Multiplication (500x500)...
+Total Ticks: 14218020                                                           
+Time elapsed: 10.000000 seconds 
+
+
+/******** SIZE: 500x100 *********/
+/****** OPTIMIZATION: O2 ********/
+
+...Starting Matrix Multiplication (500x500)...                                  
+Total Ticks: 1921086                                                            
+Time elapsed: 1.000000 seconds  
+
+
+/******** SIZE: 1024x1024 ********/
+/****** OPTIMIZATION: none *******/
+
+...Starting Matrix Multiplication (1024x1024)...
+Total Ticks: 263341379
+Time elapsed: 201.000000 seconds
+
+
+/******** SIZE: 1024x1024 ********/
+/******* OPTIMIZATION: O2 ********/
+
+...Starting Matrix Multiplication (1024x1024)...
+Total Ticks: 106823195
+Time elapsed: 81.000000 seconds
+
+/******** SIZE: 1025x1025 ********/
+/****** OPTIMIZATION: none *******/
+
+...Starting Matrix Multiplication (1025x1025)...                                
+Total Ticks: 121633151                                                          
+Time elapsed: 93.000000 seconds                                                 
+
+/******** SIZE: 1025x1025 ********/
+/****** OPTIMIZATION: O2 *******/
+                                                        
+...Starting Matrix Multiplication (1025x1025)...                                
+Total Ticks: 25033129                                                           
+Time elapsed: 19.000000 seconds
+
+
+------------------------------------------------------------------------------------
+/******* OPTIMIZATION: none ********/
+--- Pi Calculation Benchmark (Leibniz Series) ---
+Calculating Pi for 10000000.000000 terms... = 10^7
+Total Ticks: 1250000
+Time elapsed: 0.000000 seconds
+The value of pi is: 3.141592553589791503299011310446
+
+--- Pi Calculation Benchmark (Leibniz Series) ---
+Calculating Pi for 100000000.000000 terms... = 10^8
+Total Ticks: 12500000
+Time elapsed: 9.000000 seconds
+The value of pi is: 3.141592643589325994923910911893
+
+--- Pi Calculation Benchmark (Leibniz Series) ---
+Calculating Pi for 1000000000.000000 terms... = 10^9                                  
+Total Ticks: 125000000                                                          
+Time elapsed: 95.000000 seconds                                                 
+The value of pi is: 3.141592652588050427198140823748
+
+/******* OPTIMIZATION: O2 ********/
+--- Pi Calculation Benchmark (Leibniz Series) ---                               
+Calculating Pi for 1000000000.000000 terms... = 10^9                                    
+Total Ticks: 82031250                                                           
+Time elapsed: 62.000000 seconds                                                 
+The value of pi is: 3.141592652588050427198140823748
+
+/******* OPTIMIZATION: O3 ********/
+--- Pi Calculation Benchmark (Leibniz Series) ---                               
+Calculating Pi for 1000000000.000000 terms... = 10^9                                  
+Total Ticks: 70312500                                                           
+Time elapsed: 53.000000 seconds                                                 
+The value of pi is: 3.141592652588050427198140823748
+
