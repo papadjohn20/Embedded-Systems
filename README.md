@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align=center>
 
 # ECE 340: Embedded Systems
@@ -83,3 +84,7 @@ Development of a complete **System-on-Chip (SoC)** by interfacing the ARM proces
 * **3️⃣ Lab 3 (Pending):** Major 7-week system-level project (Final Capstone).
 
 ---
+=======
+# Embedded-Systems
+Embedded Systems projects on Xilinx Zynq-7000 FPGA (Zedboard) for the ECE340 course at the University of Thessaly from my 3rd year.
+>>>>>>> 936902baa5df12718cf702241a663ec13e6c64f1
