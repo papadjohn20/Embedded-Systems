@@ -60,10 +60,36 @@ Development of a complete **System-on-Chip (SoC)** by interfacing the ARM proces
 * **Workload Analysis:** Profiled computationally intensive tasks, specifically **Matrix Multiplication** and the **Calculation of Pi**. 
 * **Optimization:** Evaluated the impact of software optimizations (such as loop unrolling) by comparing "Before vs. After" execution times, gaining insight into CPU bottleneck management.
 
+#### Step 2: Application Profiling & Code Optimization
+* **Performance Benchmarking:** Implemented a high-precision timer utility using the **ARM Private Timer** to profile two distinct workload types.
+* **Workload Analysis:** 
+    * **Matrix Multiplication (Memory-Bound):** Used to stress-test the cache subsystem. larger sizes (e.g., 1024x1024) highlight performance drops due to high **cache miss** rates and memory latency.
+    * **Pi Calculation (CPU-Bound):** Focused on pure arithmetic throughput (Leibniz series) with minimal memory footprint to evaluate raw ALU performance.
+* **Optimization:** Evaluated compiler flags (**None, O2, O3**) across various problem sizes. Results are documented in `lab2/step2/runs.txt`, demonstrating the impact of compiler-level optimizations on cycle efficiency.
+
 #### Step 3: Custom IP Integration (Lab 1 FPU)
-* **IP Packaging:** Converted the Floating Point Adder from Lab 1 into a standalone **AXI4-Lite Peripheral**. 
+* **Custom IP** Converted the Floating Point Adder from Lab 1 into a standalone **AXI4-Lite Peripheral**. 
 * **Address Mapping:** Integrated the IP into the SoC's memory map, allowing the ARM CPU to write operands ($A, B$) and control signals directly to the hardware registers.
 * **System Integration:** Verified the full path: ARM CPU triggers the FPU $\rightarrow$ Hardware calculates result $\rightarrow$ Output is displayed on Zedboard's **LEDs** and **7-Segment displays**.
+
+<table align="center">
+  <tr>
+    <td align="center"><b> A Representative Photo</b></td>
+  </tr>
+  <tr>
+    <td><img src="photos/lab2.jpg" width="600px"></td>
+  </tr>
+</table>
+
+The software developed in Vitis for each step, has been hosted in a different workspace:
+
+| Step | Vitis Workspace |
+| :--- | :--- |
+| `lab2/step1a` | **`workspace/`** | 
+| `lab2/step1b` | **`workspace2/lab2_interrupt_arm`** |
+| `lab2/step2` | **`workspace_step2/step2_arm`** | 
+| `lab2/step3` | **`workspace_step3/lab2_fpadd_platform`** |
+
 
 ### 🛠️ Toolstack
 | Category | Tool |
@@ -83,7 +109,3 @@ Development of a complete **System-on-Chip (SoC)** by interfacing the ARM proces
 * **3️⃣ Lab 3 (Pending):** Major 7-week system-level project (Final Capstone).
 
 ---
-=======
-# Embedded-Systems
-Embedded Systems projects on Xilinx Zynq-7000 FPGA (Zedboard) for the ECE340 course at the University of Thessaly from my 3rd year.
->>>>>>> 936902baa5df12718cf702241a663ec13e6c64f1
