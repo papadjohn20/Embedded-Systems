@@ -78,11 +78,6 @@ Development of a complete **System-on-Chip (SoC)** by interfacing the ARM proces
 * **1b. Interrupt Handling:** Replaced the polling mechanism with an **Interrupt-Driven** approach. Configured the **Generic Interrupt Controller (GIC)** to detect button presses as asynchronous events, triggering specialized Interrupt Service Routines (ISRs) to update a counter.
 
 #### Step 2: Application Profiling & Code Optimization
-* **Performance Benchmarking:** Implemented a timer utility using the **ARM Private Timer** to measure execution cycles with high precision.
-* **Workload Analysis:** Profiled computationally intensive tasks, specifically **Matrix Multiplication** and the **Calculation of Pi**. 
-* **Optimization:** Evaluated the impact of software optimizations (such as loop unrolling) by comparing "Before vs. After" execution times, gaining insight into CPU bottleneck management.
-
-#### Step 2: Application Profiling & Code Optimization
 * **Performance Benchmarking:** Implemented a high-precision timer utility using the **ARM Private Timer** to profile two distinct workload types.
 * **Workload Analysis:** 
     * **Matrix Multiplication (Memory-Bound):** Used to stress-test the cache subsystem. larger sizes (e.g., 1024x1024) highlight performance drops due to high **cache miss** rates and memory latency.
