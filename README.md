@@ -123,10 +123,65 @@ The software developed in Vitis for each step, has been hosted in a different wo
 
 <div align=center>
 
-## Upcoming Labs
+## 3️⃣ Lab 3:  FPGAs as Accelerators
 
 </div>
 
-* **3️⃣ Lab 3 (Pending):** Major 7-week system-level project (Final Capstone).
+**Duration:** 7 Weeks | **Focus:** High-Level Synthesis (HLS), OpenCL, Pararell Array Architectures, Memory Hierarchy Optimization
+
+### 🎯 Overview
+An end-to-end acceleration of a Sequence Alignment algorithm (Local Sequence Alignment - Smith-Waterman variant) on a Xilinx Adaptive SoC. The project focuses on transforming a standard sequence alignment loop into a massively parallel hardware accelerator using **Xilinx Vitis High-Level Synthesis (HLS)** and managing the system execution via an **OpenCL Host Application** running on the ARM CPU. 
+
+The core computation is accelerated by converting a data-dependent dynamic programming matrix into a **parallel Array-like pipeline**, processing alignment cells along anti-diagonals to achieve an Ideal Initiation Interval ($II=1$).
+
+### 📂 Repository Structure & Project Steps
+
+The source code for this lab is organized into specialized directories tracking the design exploration and scaling process:
+
+* **`sw_x86_codes/`:** Initial algorithmic evaluation on x86/ARM CPU. Includes different software optimization steps (`lsal.cpp`, `lsal_plus1.cpp`,  `lsal_outside.cpp`) to model memory layouts and bounds check reductions before moving to hardware.
+* **`hardware_codes/`:** Hardware/Software Co-Design implementations for the baseline dataset ($N=32$ query size, $M=65536$ database size).
+    * Includes incremental architecture steps (`serial`, `diag_first`, `diag_second`, `diag_third`) exploring pipeline scheduling.
+    * **`final/`:** The final optimized hardware setup. It features 512-bit wide AXI Master interfaces, vector bit-packing (packing 170 3-bit characters per 512-bit DRAM block), an on-the-fly streaming window data-loader, a **complete parallel pipeline ($II=1$)**, and an **HW Binary Reduction Tree** to find the maximum alignment score case without stalls.
+* **`bigger_inputs/`:** Scaled up versions of the accelerated kernel to benchmark memory bandwidth and hardware resources. Contains standalone folders configuring the Host and Kernel for larger global matrices:
+    * `inputs_32_100000 / inputs_32_120000 / inputs_32_125000` (Query: 32, Database up to 125K)
+    * `inputs_64_65536 / inputs_64_125000` (Scaled Query size to 64 elements)
+
+<pre>
+. (Lab 3 Root Directory)
+├── assignment.pdf
+├── Lab3_PowerPoint.pptx
+├── Lab3_Report.pdf
+├── sw_x86_codes/
+│   ├── lsal.cpp
+│   ├── lsal_outside.cpp
+│   └── lsal_plus1.cpp
+├── hardware_codes/
+│   ├── serial/
+│   ├── diag_first/
+│   ├── diag_second/
+│   ├── diag_third/
+│   └── final/
+│       ├── lsal.cpp
+│       └── lsal_host.cpp
+└── bigger_inputs/
+    ├── inputs_32_100000/
+    ├── inputs_32_120000/
+    ├── inputs_32_125000/
+    ├── inputs_64_65536/
+    └── inputs_64_125000/
+</pre>
+
+### 📈 Documentation
+The complete analysis, benchmarking results, hardware resource utilization (BRAM, DSP, FF, LUT), and design tradeoffs can be found in the root of the lab folder:
+* 📄 **[`assignment.pdf`](./assignment.pdf):** The official project specifications.
+* 📄 **[`Lab3_Report.pdf`](./Lab3_Report.pdf):** The final technical report containing execution time comparisons between CPU vs FPGA.
+* 📊 **[`Lab3_PowerPoint.pptx`](./Lab3_PowerPoint.pptx):** Project presentation slides.
+
+### 🛠️ Toolstack
+| Category | Tool |
+| :--- | :--- |
+| **HW Synthesis** | Xilinx Vitis HLS 2020.2 / Vivado Design Suite |
+| **Runtime Flow** | OpenCL API / Xilinx Runtime (XRT) |
+| **Language** | C++ |
 
 ---
