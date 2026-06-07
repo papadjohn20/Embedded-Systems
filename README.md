@@ -173,9 +173,9 @@ The source code for this lab is organized into specialized directories tracking 
 
 ### 📈 Documentation
 The complete analysis, benchmarking results, hardware resource utilization (BRAM, DSP, FF, LUT), and design tradeoffs can be found in the root of the lab folder:
-* 📄 **[`assignment.pdf`](./assignment.pdf):** The official project specifications.
-* 📄 **[`Lab3_Report.pdf`](./Lab3_Report.pdf):** The final technical report containing execution time comparisons between CPU vs FPGA.
-* 📊 **[`Lab3_PowerPoint.pptx`](./Lab3_PowerPoint.pptx):** Project presentation slides.
+* 📄 **[`assignment.pdf`](./lab3/assignment.pdf):** The official project specifications.
+* 📄 **[`Lab3_Report.pdf`](./lab3/Lab3_Report.pdf):** The final technical report containing execution time comparisons between CPU vs FPGA.
+* 📊 **[`Lab3_PowerPoint.pptx`](./lab3/Lab3_PowerPoint.pptx):** Project presentation slides.
 
 ### 🛠️ Toolstack
 | Category | Tool |
